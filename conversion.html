@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Assignment #1 - Conversion</h1>
+
+<h3>Celsius to Fahrenheit</h3>
+<p>
+<label>Celsius:</label>
+<input id="c" type="number">
+<button onclick="toF()">Convert to Fahrenheit</button><br><br>
+
+<label>Fahrenheit:</label>
+<input id="f" type="number">
+<button onclick="toC()">Convert to Celsius</button>
+</p>
+
+<h3>Meters to Feet</h3>
+<p>
+<label>Meters:</label>
+<input id="m" type="number">
+<button onclick="toFt()">Convert to Feet</button><br><br>
+
+<label>Feet:</label>
+<input id="ft" type="number">
+<button onclick="toM()">Convert to Meters</button>
+</p>
+
+<p><a href="index.html">Back to Home Page</a></p>
+
+<script>
+function toF() {
+  let c = document.getElementById("c").value * 1;
+  document.getElementById("f").value = (c * 9/5 + 32).toFixed(2);
+}
+function toC() {
+  let f = document.getElementById("f").value * 1;
+  document.getElementById("c").value = ((f - 32) * 5/9).toFixed(2);
+}
+function toFt() {
+  let m = document.getElementById("m").value * 1;
+  document.getElementById("ft").value = (m * 3.28084).toFixed(2);
+}
+function toM() {
+  let ft = document.getElementById("ft").value * 1;
+  document.getElementById("m").value = (ft / 3.28084).toFixed(2);
+}
+</script>
+
+</body>
+</html>
