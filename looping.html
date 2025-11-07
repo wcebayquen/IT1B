@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Assignment #3 - Loops</h1>
+
+<p>Enter a number: <input id="n" type="number"></p>
+<button onclick="factorial()">Factorial (While)</button>
+<button onclick="sum()">Sum (Do While)</button>
+<button onclick="average()">Average (For)</button>
+
+<h3 id="result"></h3>
+<p><a href="index.html">Back to Home Page</a></p>
+
+<script>
+function factorial() {
+  let n = document.getElementById("n").value * 1;
+  let i = 1, f = 1;
+  while (i <= n) { f *= i; i++; }
+  document.getElementById("result").innerHTML = "Factorial: " + f;
+}
+
+function sum() {
+  let n = document.getElementById("n").value * 1;
+  let s = 0, i = 1;
+  do { s += i; i++; } while (i <= n);
+  document.getElementById("result").innerHTML = "Sum of first " + n + " numbers: " + s;
+}
+
+function average() {
+  let n = document.getElementById("n").value * 1;
+  let s = 0;
+  for (let i = 1; i <= n; i++) s += i;
+  let avg = s / n;
+  document.getElementById("result").innerHTML = "Average of first " + n + " numbers: " + avg.toFixed(2);
+}
+</script>
+  
+</body>
+</html>
